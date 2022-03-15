@@ -6,6 +6,6 @@ node {
                 sh 'mvn -Dmaven.test.failure.ignore clean package'
             }
     stage('ArchiveResults') {
-        archiveArtifacts 'target/*.jar'
+        archiveArtifacts 'target/*.war'
     }
 }
