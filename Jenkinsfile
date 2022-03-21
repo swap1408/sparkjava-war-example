@@ -3,7 +3,7 @@ node {
         git branch: 'master', url: 'https://github.com/saaaneo/sparkjava-war-example.git'
     }
     stage('Build') {
-                sh 'm36 clean package'
+                sh 'mvn clean package'
             }
     stage('ArchiveResults') {
         archiveArtifacts 'target/*.war'
