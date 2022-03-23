@@ -1,6 +1,6 @@
 node {
     stage('Preparation') { 
-        git branch: 'master', url: 'https://github.com/saaaneo/sparkjava-war-example.git'
+        git 'https://github.com/adhavvishal/sparkjava-war-example.git'
     }
     stage('Build') {
                 sh 'mvn clean package'
