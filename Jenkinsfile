@@ -1,6 +1,6 @@
 node {
     stage('Preparation') { 
-        git 'https://github.com/adhavvishal/sparkjava-war-example.git'
+        git 'https://github.com/swap1408/sparkjava-war-example.git'
     }
     stage('Build') {
                 sh 'mvn clean package'
@@ -11,7 +11,7 @@ node {
      
     stage('Deploy-War') {
          sshagent(['deploy-war']) {
-             sh "scp -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/tomcat-war/target/sparkjava-hello-world-1.0.war ec2-user@54.144.94.207:/opt/apache-tomcat-9.0.60/webapps/"
+             sh "scp -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/tomcat-war/target/sparkjava-hello-world-1.0.war ubuntu@13.126.21.136:/opt/tomcat/webapps/"
         } 
     }
 }
