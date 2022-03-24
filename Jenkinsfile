@@ -9,8 +9,10 @@ node {
         archiveArtifacts 'target/*.war'
     }
      
-     /*stage('Deploy-War') {
+    stage('Deploy-War') {
          sshagent(['deploy-war']) {
              sh "scp -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/java-project1/sparkjava-hello-world-1.0.war ec2-user@54.144.94.207:/var/lib/tomcat9/webapps"
-        } */
+        } 
+    }
 }
+    
