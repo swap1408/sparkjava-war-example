@@ -11,7 +11,7 @@ node {
      
     stage('Deploy-War') {
          sshagent(['deploy-war']) {
-             sh "scp -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/tomcat-war/target/sparkjava-hello-world-1.0.war ubuntu@13.126.21.136:/opt/tomcat/webapps/"
+             sh "scp -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/tomcat-war/target/sparkjava-hello-world-1.0.war ubuntu@13.126.21.136:/opt/tomcat/webapps"
         } 
     }
 }
