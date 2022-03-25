@@ -8,7 +8,7 @@
 		<filter-class>spark.servlet.SparkFilter</filter-class>
 		<init-param>
 			<param-name>applicationClass</param-name>
-			<param-value>Hello-to-World</param-value>
+			<param-value>HelloWorld</param-value>
 		</init-param>
 	</filter>
 
